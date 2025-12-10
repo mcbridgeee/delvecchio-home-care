@@ -119,7 +119,7 @@ section {
 }
 
 .bg-cream {
-  background-color: var(--color-secondary);
+  background-color: #fffef7;
 }
 
 /* Header - Mobile First */
@@ -342,21 +342,21 @@ header {
 }
 
 .promise-card {
-  border: 1px solid #ddd;
+  border: 2px solid var(--color-primary);
   border-radius: var(--radius);
   padding: var(--spacing-lg);
   text-align: center;
   transition: transform 0.2s;
-  background-color: var(--color-white);
+  background-color: #fffef7;
 }
 
 .promise-card:hover {
   transform: translateY(-5px);
-  border-color: var(--color-primary);
 }
 
+
 .promise-icon {
-  font-size: 2.5rem;
+  font-size: 3.5rem;
   color: var(--color-primary);
   margin-bottom: var(--spacing-md);
 }
@@ -430,6 +430,7 @@ footer {
   height: 64px;
   border-radius: 50%;
   border: 2px solid var(--color-white);
+
   /* Double border effect if needed, or just white bg */
   display: flex;
   align-items: center;
@@ -464,7 +465,7 @@ footer {
 }
 
 .footer-links a {
-  color: rgba(255, 255, 255, 0.8) !important;
+  color: rgb(255 255 255 / 80%) !important;
   text-decoration: none;
   transition: opacity 0.2s;
 }
@@ -480,7 +481,7 @@ footer {
 }
 
 .footer-bottom {
-  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  border-top: 1px solid rgb(255 255 255 / 10%);
   padding-top: 1.5rem;
   text-align: center;
   font-size: 0.85rem;
@@ -538,6 +539,29 @@ footer {
   line-height: 2;
 }
 
+/* Service Checklist Cards */
+.service-checklist {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  color: #555;
+}
+
+.service-checklist li {
+  position: relative;
+  padding-left: 1.5rem;
+  margin-bottom: 0.75rem;
+  line-height: 1.4;
+}
+
+.service-checklist li::before {
+  content: '✓';
+  position: absolute;
+  left: 0;
+  color: var(--color-primary);
+  font-weight: bold;
+}
+
 /* Service Cards - Visual */
 .service-cards-grid {
   display: grid;
@@ -545,6 +569,7 @@ footer {
   gap: var(--spacing-lg);
   margin-top: var(--spacing-lg);
 }
+
 
 .service-card-visual {
   background: var(--color-white);
@@ -554,12 +579,16 @@ footer {
   text-align: left;
   display: flex;
   flex-direction: column;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
 }
 
 .service-card-visual:hover {
   transform: translateY(-4px);
-  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  box-shadow:
+    0 10px 15px -3px rgb(0 0 0 / 10%),
+    0 4px 6px -2px rgb(0 0 0 / 5%);
 }
 
 .service-card-content {
@@ -587,7 +616,7 @@ footer {
 }
 
 .service-card-subtitle {
-  font-family: 'Inter', sans-serif;
+  font-family: Inter, sans-serif;
   font-style: italic;
   color: #666;
   font-size: 0.95rem;
@@ -600,6 +629,7 @@ footer {
   height: 200px;
   object-fit: cover;
   margin-top: auto;
+
   /* Push to bottom */
   transition: transform 0.5s ease;
 }
