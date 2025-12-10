@@ -1,0 +1,34 @@
+{
+  "name": "delvecchio-home-care",
+  "version": "1.0.0",
+  "description": "a reusable setup script that starts a complete eleventy web project with modern development tooling, automated formatting, linting, and ci/cd pipelines.   this repo lets you create clean, production-ready projects in seconds, without configuring anything by hand.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "npx eleventy --serve --quiet",
+    "build": "ELEVENTY_ENV=production npx eleventy",
+    "format": "prettier --write \"**/*.{js,jsx,ts,tsx,css,scss,md,json,njk,html}\"",
+    "format:check": "prettier --check \"**/*.{js,jsx,ts,tsx,css,scss,md,json,njk,html}\"",
+    "lint:js": "eslint .",
+    "lint:css": "stylelint \"src/**/*.css\"",
+    "lint": "npm run lint:js && npm run lint:css",
+    "precommit": "npm run format:check && npm run lint",
+    "lhci": "lhci autorun",
+    "prepare": "husky install"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@11ty/eleventy": "^3.1.2",
+    "@lhci/cli": "^0.15.1",
+    "eslint": "^8.57.1",
+    "husky": "^9.1.7",
+    "prettier": "^3.7.4",
+    "stylelint": "^16.26.1",
+    "stylelint-config-standard": "^39.0.1"
+  },
+  "dependencies": {
+    "luxon": "^3.7.2"
+  }
+}

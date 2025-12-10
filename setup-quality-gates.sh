@@ -28,7 +28,13 @@ echo "Ensuring Eleventy structure exists..."
 if [ ! -f eleventy.config.js ]; then
   echo "Creating eleventy.config.js..."
   cat > eleventy.config.js << 'EOF'
-module.exports = function (_eleventyConfig) {
+module.exports = function (eleventyConfig) {
+  // Add date filter so templates don't error
+  eleventyConfig.addFilter("date", function (value, format = "yyyy") {
+    // Always return current year
+    return new Date().getFullYear();
+  });
+
   return {
     dir: {
       input: "src",
