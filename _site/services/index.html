@@ -8,7 +8,7 @@
       name="description"
       content="Trusted general contractor and handyman services in Central New Jersey. Licensed & Insured."
     />
-    <link rel="stylesheet" href="/style.css?v=1765406351651" />
+    <link rel="stylesheet" href="/style.css?v=1765409168242" />
     <link
       rel="stylesheet"
       href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0"
@@ -78,39 +78,61 @@
       </p>
     </div>
 
-    <div class="services-split">
-      <div class="service-col">
-        <h3 style="display: flex; align-items: center; gap: 0.5rem">
-          <span class="material-symbols-outlined" style="color: var(--color-primary);">build</span> The Small Stuff
-        </h3>
-        <p style="font-style: italic; color: #666; margin-bottom: 1.5rem">
-          Other contractors ignore these. We specialize in them.
-        </p>
-        <ul class="service-list">
-          <li>Electrical Repairs & Outlet Installation</li>
-          <li>Plumbing Fixes (Leaks, Faucets, Toilets)</li>
-          <li>Drywall Patching & Touch-ups</li>
-          <li>Door & Window Repairs</li>
-          <li>Light Fixture Installation</li>
-          <li>Emergency Handyman Services</li>
-        </ul>
+    <div class="service-cards-grid">
+      <!-- Card 1: Carpentry (Replacing Electrical) -->
+      <div class="service-card-visual">
+        <div class="service-card-content">
+          <div class="service-card-header">
+            <span class="material-symbols-outlined service-card-icon"
+              >carpenter</span
+            >
+            <h3 class="service-card-title">Carpentry</h3>
+          </div>
+          <p class="service-card-subtitle">Custom shelving, trim, and repairs</p>
+        </div>
+        <img
+          src="/images/carpentry.png"
+          alt="Hands sanding wood"
+          class="service-card-image"
+        />
       </div>
 
-      <div class="service-col">
-        <h3 style="display: flex; align-items: center; gap: 0.5rem">
-          <span class="material-symbols-outlined" style="color: var(--color-primary);">roofing</span> The Big Stuff
-        </h3>
-        <p style="font-style: italic; color: #666; margin-bottom: 1.5rem">
-          When you're ready, we handle the full renovations too.
-        </p>
-        <ul class="service-list">
-          <li>Kitchen Renovations</li>
-          <li>Basement Finishing</li>
-          <li>Bathroom Remodels</li>
-          <li>Home Additions</li>
-          <li>Auto Shop Fit-outs</li>
-          <li>Full Home Renovations</li>
-        </ul>
+      <!-- Card 2: Plumbing -->
+      <div class="service-card-visual">
+        <div class="service-card-content">
+          <div class="service-card-header">
+            <span class="material-symbols-outlined service-card-icon"
+              >water_drop</span
+            >
+            <h3 class="service-card-title">Plumbing</h3>
+          </div>
+          <p class="service-card-subtitle">
+            Emergency repairs to installations
+          </p>
+        </div>
+        <img
+          src="/images/plumbing.png"
+          alt="Modern bathroom faucet"
+          class="service-card-image"
+        />
+      </div>
+
+      <!-- Card 3: Renovations -->
+      <div class="service-card-visual">
+        <div class="service-card-content">
+          <div class="service-card-header">
+            <span class="material-symbols-outlined service-card-icon"
+              >construction</span
+            >
+            <h3 class="service-card-title">Renovations</h3>
+          </div>
+          <p class="service-card-subtitle">Kitchen, bath, basement & more</p>
+        </div>
+        <img
+          src="/images/renovation.png"
+          alt="Home renovation interior"
+          class="service-card-image"
+        />
       </div>
     </div>
   </div>
@@ -118,17 +140,49 @@
 </main>
 
     <footer>
-      <div class="container text-center">
-        <h3>Proudly Serving Central New Jersey</h3>
-        <p>Your local, trusted handyman and contractor.</p>
-            
-            <div style="margin: 1.5rem 0;">
-                <a href="/service-area/" style="color: #777; text-decoration: underline; font-size: 0.9rem;">View Service Area</a>
+      <div class="container">
+        <div class="footer-grid">
+          <!-- Col 1: Logo & Quote -->
+          <div class="footer-col">
+            <div class="footer-logo-circle">
+                 <svg width="32" height="32" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M12 3L2 12H5V20H19V12H22L12 3Z" fill="#2c5234"/>
+                 </svg>
             </div>
+            <div class="footer-quote">
+              "Big projects. Small repairs. One neighbor you can trust."
+            </div>
+          </div>
 
-            <div style="margin-top: 2rem; font-size: 0.9rem; color: #777;">
-                &copy; 2025 DelVecchio Home Care. All rights
-          reserved.
+          <!-- Col 2: Quick Links -->
+          <div class="footer-col">
+            <h4 class="footer-heading">Quick Links</h4>
+            <ul class="footer-links">
+              <li><a href="/services/">Services</a></li>
+              <li><a href="/service-area/">Service Area</a></li>
+              <li><a href="/work/">See Our Work</a></li>
+              <li><a href="/contact/">Contact API</a></li>
+            </ul>
+          </div>
+
+          <!-- Col 3: Service Areas -->
+          <div class="footer-col">
+            <h4 class="footer-heading">Service Areas</h4>
+            <div class="service-areas-text">
+              Bound Brook, Somerset, Middlesex, Mercer, Union, Basking Ridge,
+              Warren & Surrounding Areas
+            </div>
+          </div>
+        </div>
+
+        <div class="footer-bottom">
+          <div>
+            &copy; 2025 DelVecchio Home Care. Licensed &
+            Insured. NJ License #12345
+          </div>
+          <div>
+            Handyman Services | Home Repairs | Renovations | Emergency Service
+          </div>
         </div>
       </div>
     </footer>

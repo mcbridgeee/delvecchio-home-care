@@ -70,21 +70,49 @@
     <main>{{ content | safe }}</main>
 
     <footer>
-      <div class="container text-center">
-        <h3>Proudly Serving Central New Jersey</h3>
-        <p>Your local, trusted handyman and contractor.</p>
+      <div class="container">
+        <div class="footer-grid">
+          <!-- Col 1: Logo & Quote -->
+          <div class="footer-col">
+            <div class="footer-logo-circle">
+                 <svg width="32" height="32" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M12 3L2 12H5V20H19V12H22L12 3Z" fill="#2c5234"/>
+                 </svg>
+            </div>
+            <div class="footer-quote">
+              "Big projects. Small repairs. One neighbor you can trust."
+            </div>
+          </div>
 
-        <div style="margin: 1.5rem 0">
-          <a
-            href="/service-area/"
-            style="color: #777; text-decoration: underline; font-size: 0.9rem"
-            >View Service Area</a
-          >
+          <!-- Col 2: Quick Links -->
+          <div class="footer-col">
+            <h4 class="footer-heading">Quick Links</h4>
+            <ul class="footer-links">
+              <li><a href="/services/">Services</a></li>
+              <li><a href="/service-area/">Service Area</a></li>
+              <li><a href="/work/">See Our Work</a></li>
+              <li><a href="/contact/">Contact API</a></li>
+            </ul>
+          </div>
+
+          <!-- Col 3: Service Areas -->
+          <div class="footer-col">
+            <h4 class="footer-heading">Service Areas</h4>
+            <div class="service-areas-text">
+              Bound Brook, Somerset, Middlesex, Mercer, Union, Basking Ridge,
+              Warren & Surrounding Areas
+            </div>
+          </div>
         </div>
 
-        <div style="margin-top: 2rem; font-size: 0.9rem; color: #777">
-          &copy; {{ "now" | date("yyyy") }} DelVecchio Home Care. All rights
-          reserved.
+        <div class="footer-bottom">
+          <div>
+            &copy; {{ "now" | date("yyyy") }} DelVecchio Home Care. Licensed &
+            Insured. NJ License #12345
+          </div>
+          <div>
+            Handyman Services | Home Repairs | Renovations | Emergency Service
+          </div>
         </div>
       </div>
     </footer>
