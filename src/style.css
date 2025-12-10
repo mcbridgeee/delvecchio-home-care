@@ -212,6 +212,9 @@ header {
 /* Hero */
 .hero {
   background-color: var(--color-primary);
+  background-image: url('/images/hero-bg.jpg');
+  background-size: cover;
+  background-position: center;
   color: var(--color-white);
   padding: 6rem 0;
   position: relative;
@@ -222,8 +225,12 @@ header {
 .hero::before {
   content: '';
   position: absolute;
-  inset: 0;
-  background: linear-gradient(rgb(46 93 56 / 90%), rgb(46 93 56 / 80%));
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  /* Green overlay, slightly faded to let image show through */
+  background: linear-gradient(rgba(44, 82, 52, 0.75), rgba(44, 82, 52, 0.65));
   z-index: 1;
 }
 
@@ -295,7 +302,7 @@ header {
   gap: var(--spacing-lg);
 }
 
-@media (width <= 768px) {
+@media (width <=768px) {
   .services-split {
     grid-template-columns: 1fr;
   }
