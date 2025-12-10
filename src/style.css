@@ -430,6 +430,7 @@ footer {
   height: 64px;
   border-radius: 50%;
   border: 2px solid var(--color-white);
+
   /* Double border effect if needed, or just white bg */
   display: flex;
   align-items: center;
@@ -464,7 +465,7 @@ footer {
 }
 
 .footer-links a {
-  color: rgba(255, 255, 255, 0.8) !important;
+  color: rgb(255 255 255 / 80%) !important;
   text-decoration: none;
   transition: opacity 0.2s;
 }
@@ -480,7 +481,7 @@ footer {
 }
 
 .footer-bottom {
-  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  border-top: 1px solid rgb(255 255 255 / 10%);
   padding-top: 1.5rem;
   text-align: center;
   font-size: 0.85rem;
@@ -554,12 +555,16 @@ footer {
   text-align: left;
   display: flex;
   flex-direction: column;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
 }
 
 .service-card-visual:hover {
   transform: translateY(-4px);
-  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  box-shadow:
+    0 10px 15px -3px rgb(0 0 0 / 10%),
+    0 4px 6px -2px rgb(0 0 0 / 5%);
 }
 
 .service-card-content {
@@ -587,7 +592,7 @@ footer {
 }
 
 .service-card-subtitle {
-  font-family: 'Inter', sans-serif;
+  font-family: Inter, sans-serif;
   font-style: italic;
   color: #666;
   font-size: 0.95rem;
@@ -600,6 +605,7 @@ footer {
   height: 200px;
   object-fit: cover;
   margin-top: auto;
+
   /* Push to bottom */
   transition: transform 0.5s ease;
 }
