@@ -10,6 +10,7 @@ this repo lets you create clean, production-ready projects in seconds, without c
 running `setup-quality-gates.sh` generates a full development environment including:
 
 ### eleventy project structure
+
 - `eleventy.config.js`
 - `src/` folder with:
   - starter layout (`_includes/layouts/base.njk`)
@@ -17,28 +18,32 @@ running `setup-quality-gates.sh` generates a full development environment includ
   - starter stylesheet (`style.css`)
 
 ### code quality tools
+
 - prettier (`.prettierrc`, `.prettierignore`)
 - eslint v8 (`.eslintrc.cjs`, `.eslintignore`)
 - stylelint (`.stylelintrc.json`, `.stylelintignore`)
 - unified formatting + linting scripts added to `package.json`
 
 ### automation & safety
-- husky pre-commit hook  
-  - blocks commits that fail formatting or linting  
-- lighthouse ci (`lighthouserc.json`)  
+
+- husky pre-commit hook
+  - blocks commits that fail formatting or linting
+- lighthouse ci (`lighthouserc.json`)
   - automated checks for performance, accessibility, best practices, and seo
 
 ### github actions ci/cd
+
 created automatically at:
 .github/workflows/ci-cd.yml
 
 this pipeline:
-- installs dependencies  
-- runs prettier checks  
-- runs eslint + stylelint  
-- builds the eleventy site  
-- runs lighthouse ci  
-- deploys to github pages if everything passes  
+
+- installs dependencies
+- runs prettier checks
+- runs eslint + stylelint
+- builds the eleventy site
+- runs lighthouse ci
+- deploys to github pages if everything passes
 
 ---
 
@@ -57,28 +62,28 @@ you now have a full eleventy project with quality gates.
 
 after running the setup script, your project will include:
 
-| command | description |
-|--------|-------------|
-| `npm run dev` | start eleventy with live reload |
-| `npm run build` | production eleventy build |
-| `npm run format` | auto-format all code (prettier) |
-| `npm run format:check` | check formatting without writing changes |
-| `npm run lint` | run eslint + stylelint |
-| `npm run lint:js` | js lint only |
-| `npm run lint:css` | css lint only |
-| `npm run lhci` | run lighthouse ci locally |
-| `npm run precommit` | formatting + linting gate (run automatically by husky) |
+| command                | description                                            |
+| ---------------------- | ------------------------------------------------------ |
+| `npm run dev`          | start eleventy with live reload                        |
+| `npm run build`        | production eleventy build                              |
+| `npm run format`       | auto-format all code (prettier)                        |
+| `npm run format:check` | check formatting without writing changes               |
+| `npm run lint`         | run eslint + stylelint                                 |
+| `npm run lint:js`      | js lint only                                           |
+| `npm run lint:css`     | css lint only                                          |
+| `npm run lhci`         | run lighthouse ci locally                              |
+| `npm run precommit`    | formatting + linting gate (run automatically by husky) |
 
 ## why this exists
 
 setting up a proper web dev environment means juggling:
 
-- config files  
-- linters  
-- formatters  
-- hooks  
-- ci pipelines  
-- eleventy folders  
+- config files
+- linters
+- formatters
+- hooks
+- ci pipelines
+- eleventy folders
 
 this script makes all of that happen with one command, so you can focus on design, ux, and actual development instead of configuration.
 
@@ -91,7 +96,7 @@ free to use for personal or commercial projects.
 created by bridget as part of a personal tooling initiative.  
 feel free to extend it and make it your own.
 
-
 ```bash
 
 sjolder:
+```
