@@ -3,26 +3,25 @@
 
 :root {
   --color-primary: #2c5234;
-  /* Updated Hunter Green */
-  --color-primary-dark: #1F3825;
-  --color-secondary: #F5F5F0;
-  /* Cream */
-  --color-accent: #E8E8E0;
-  --color-text: #333333;
-  --color-text-light: #555555;
-  --color-white: #FFFFFF;
 
+  /* Updated Hunter Green */
+  --color-primary-dark: #1f3825;
+  --color-secondary: #f5f5f0;
+
+  /* Cream */
+  --color-accent: #e8e8e0;
+  --color-text: #333;
+  --color-text-light: #555;
+  --color-white: #fff;
   --font-heading: 'Bitter', serif;
   --font-body: 'Inter', sans-serif;
-
   --spacing-sm: 0.5rem;
   --spacing-md: 1rem;
   --spacing-lg: 2rem;
   --spacing-xl: 4rem;
-
   --container-width: 1200px;
   --radius: 8px;
-  --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  --shadow: 0 4px 6px -1px rgb(0 0 0 / 10%), 0 2px 4px -1px rgb(0 0 0 / 6%);
 }
 
 /* Reset & Base */
@@ -109,10 +108,11 @@ img {
 /* Sections */
 section {
   padding: var(--spacing-lg) 0;
+
   /* Reduced padding for mobile */
 }
 
-@media (min-width: 768px) {
+@media (width >=768px) {
   section {
     padding: var(--spacing-xl) 0;
   }
@@ -132,6 +132,7 @@ header {
 .nav-container {
   display: flex;
   flex-direction: column;
+
   /* Stack logo and nav by default */
   align-items: center;
   gap: 1rem;
@@ -146,9 +147,10 @@ header {
 
 .logo-icon {
   width: 40px;
+
   /* Slightly smaller on mobile */
   height: 40px;
-  border: 2px solid rgba(255, 255, 255, 0.8);
+  border: 2px solid rgb(255 255 255 / 80%);
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -170,6 +172,7 @@ header {
   font-family: var(--font-heading);
   font-weight: 700;
   font-size: 1.25rem;
+
   /* Smaller for mobile */
   line-height: 1.1;
   color: var(--color-white);
@@ -179,13 +182,14 @@ header {
   font-family: var(--font-body);
   font-size: 0.8rem;
   font-weight: 400;
-  color: rgba(255, 255, 255, 0.8);
+  color: rgb(255 255 255 / 80%);
   margin: 0;
 }
 
 .nav-links {
   display: flex;
   flex-wrap: wrap;
+
   /* Allow wrapping on small screens */
   justify-content: center;
   gap: 1rem;
@@ -211,9 +215,10 @@ header {
   width: fit-content;
 }
 
-@media (min-width: 900px) {
+@media (width >=900px) {
   .nav-container {
     flex-direction: row;
+
     /* Row layout for larger screens */
     justify-content: space-between;
   }
@@ -247,6 +252,7 @@ header {
   background-position: center;
   color: var(--color-white);
   padding: 4rem 0;
+
   /* Reduced padding */
   position: relative;
   overflow: hidden;
@@ -256,6 +262,7 @@ header {
   content: '';
   position: absolute;
   inset: 0;
+
   /* Green overlay, slightly faded to let image show through */
   background: linear-gradient(rgb(44 82 52 / 75%), rgb(44 82 52 / 65%));
   z-index: 1;
@@ -266,11 +273,13 @@ header {
   z-index: 2;
   max-width: 800px;
   margin-left: 0;
+
   /* Keeps left alignment generally, but responsive */
 }
 
 .hero h1 {
   font-size: 2.25rem;
+
   /* Smaller for mobile */
   margin-bottom: var(--spacing-md);
   color: var(--color-white);
@@ -293,11 +302,12 @@ header {
 .hero-actions {
   display: flex;
   flex-direction: column;
+
   /* Stacked buttons on mobile */
   gap: var(--spacing-md);
 }
 
-@media (min-width: 768px) {
+@media (width >=768px) {
   .hero {
     padding: 6rem 0;
   }
@@ -316,6 +326,7 @@ header {
 
   .hero-actions {
     flex-direction: row;
+
     /* Side-by-side buttons */
   }
 }
@@ -324,6 +335,7 @@ header {
 .promise-grid {
   display: grid;
   grid-template-columns: 1fr;
+
   /* Single column by default */
   gap: var(--spacing-lg);
   margin-top: var(--spacing-lg);
@@ -349,9 +361,10 @@ header {
   margin-bottom: var(--spacing-md);
 }
 
-@media (min-width: 768px) {
+@media (width >=768px) {
   .promise-grid {
     grid-template-columns: repeat(3, 1fr);
+
     /* 3 columns on tablet+ */
   }
 }
@@ -360,6 +373,7 @@ header {
 .services-split {
   display: grid;
   grid-template-columns: 1fr;
+
   /* Single column */
   gap: var(--spacing-lg);
 }
@@ -385,9 +399,10 @@ header {
   font-weight: bold;
 }
 
-@media (min-width: 768px) {
+@media (width >=768px) {
   .services-split {
     grid-template-columns: 1fr 1fr;
+
     /* Split on tablet+ */
   }
 }
@@ -402,14 +417,16 @@ footer {
 .service-area-grid {
   display: grid;
   grid-template-columns: 1fr;
+
   /* Single column */
   gap: var(--spacing-lg);
   text-align: left;
 }
 
-@media (min-width: 600px) {
+@media (width >=600px) {
   .service-area-grid {
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+
     /* Flow nicely on wider screens */
   }
 }

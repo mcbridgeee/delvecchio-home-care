@@ -3,12 +3,12 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>{{ title | default("Delvecchio Home Care") }}</title>
+    <title>Services | DelVecchio Home Care</title>
     <meta
       name="description"
       content="Trusted general contractor and handyman services in Central New Jersey. Licensed & Insured."
     />
-    <link rel="stylesheet" href="/style.css?v={{ 'now' | date('x') }}" />
+    <link rel="stylesheet" href="/style.css?v=1765406351651" />
     <link
       rel="stylesheet"
       href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0"
@@ -67,23 +67,67 @@
       </div>
     </header>
 
-    <main>{{ content | safe }}</main>
+    <main>
+<section class="bg-cream">
+  <div class="container">
+    <div class="text-center" style="margin-bottom: 3rem">
+      <h1>Services That Fit Your Needs</h1>
+      <p>
+        Whether it's a leaky faucet today or a kitchen remodel tomorrow, we're
+        here.
+      </p>
+    </div>
+
+    <div class="services-split">
+      <div class="service-col">
+        <h3 style="display: flex; align-items: center; gap: 0.5rem">
+          <span class="material-symbols-outlined" style="color: var(--color-primary);">build</span> The Small Stuff
+        </h3>
+        <p style="font-style: italic; color: #666; margin-bottom: 1.5rem">
+          Other contractors ignore these. We specialize in them.
+        </p>
+        <ul class="service-list">
+          <li>Electrical Repairs & Outlet Installation</li>
+          <li>Plumbing Fixes (Leaks, Faucets, Toilets)</li>
+          <li>Drywall Patching & Touch-ups</li>
+          <li>Door & Window Repairs</li>
+          <li>Light Fixture Installation</li>
+          <li>Emergency Handyman Services</li>
+        </ul>
+      </div>
+
+      <div class="service-col">
+        <h3 style="display: flex; align-items: center; gap: 0.5rem">
+          <span class="material-symbols-outlined" style="color: var(--color-primary);">roofing</span> The Big Stuff
+        </h3>
+        <p style="font-style: italic; color: #666; margin-bottom: 1.5rem">
+          When you're ready, we handle the full renovations too.
+        </p>
+        <ul class="service-list">
+          <li>Kitchen Renovations</li>
+          <li>Basement Finishing</li>
+          <li>Bathroom Remodels</li>
+          <li>Home Additions</li>
+          <li>Auto Shop Fit-outs</li>
+          <li>Full Home Renovations</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
 
     <footer>
       <div class="container text-center">
         <h3>Proudly Serving Central New Jersey</h3>
         <p>Your local, trusted handyman and contractor.</p>
+            
+            <div style="margin: 1.5rem 0;">
+                <a href="/service-area/" style="color: #777; text-decoration: underline; font-size: 0.9rem;">View Service Area</a>
+            </div>
 
-        <div style="margin: 1.5rem 0">
-          <a
-            href="/service-area/"
-            style="color: #777; text-decoration: underline; font-size: 0.9rem"
-            >View Service Area</a
-          >
-        </div>
-
-        <div style="margin-top: 2rem; font-size: 0.9rem; color: #777">
-          &copy; {{ "now" | date("yyyy") }} DelVecchio Home Care. All rights
+            <div style="margin-top: 2rem; font-size: 0.9rem; color: #777;">
+                &copy; 2025 DelVecchio Home Care. All rights
           reserved.
         </div>
       </div>
