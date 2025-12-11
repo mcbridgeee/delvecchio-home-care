@@ -253,6 +253,13 @@ header {
   color: var(--color-white);
   padding: 4rem 0;
 
+  /* Full height logic */
+  min-height: 100vh;
+  min-height: 100dvh;
+  /* Modern mobile browsers */
+  display: flex;
+  align-items: center;
+
   /* Reduced padding */
   position: relative;
   overflow: hidden;
@@ -264,17 +271,24 @@ header {
   inset: 0;
 
   /* Green overlay, slightly faded to let image show through */
-  background: linear-gradient(rgb(44 82 52 / 75%), rgb(44 82 52 / 65%));
+  background: linear-gradient(rgb(44 82 52 / 80%), rgb(44 82 52 / 70%));
   z-index: 1;
 }
 
 .hero .container {
   position: relative;
   z-index: 2;
-  max-width: 800px;
-  margin-left: 0;
+  width: 100%;
+  /* Force full width to align with header grid */
+  /* Removed max-width/margin-left to align with header container */
+}
 
-  /* Keeps left alignment generally, but responsive */
+/* Limit content width for readability */
+.hero h1,
+.hero p,
+.hero-quote,
+.hero-actions {
+  max-width: 800px;
 }
 
 .hero h1 {
@@ -353,7 +367,6 @@ header {
 .promise-card:hover {
   transform: translateY(-5px);
 }
-
 
 .promise-icon {
   font-size: 3.5rem;
@@ -569,7 +582,6 @@ footer {
   gap: var(--spacing-lg);
   margin-top: var(--spacing-lg);
 }
-
 
 .service-card-visual {
   background: var(--color-white);
