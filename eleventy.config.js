@@ -28,4 +28,3 @@ module.exports = function (eleventyConfig) {
     pathPrefix: '/delvecchio-home-care/',
   };
 };
-
