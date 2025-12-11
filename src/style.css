@@ -247,7 +247,7 @@ header {
 /* Hero - Mobile First */
 .hero {
   background-color: var(--color-primary);
-  background-image: url('/images/hero-bg.jpg');
+  background-image: url('images/hero-bg.jpg');
   background-size: cover;
   background-position: center;
   color: var(--color-white);
