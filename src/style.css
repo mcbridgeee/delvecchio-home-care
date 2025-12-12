@@ -22,6 +22,32 @@
   --container-width: 1200px;
   --radius: 8px;
   --shadow: 0 4px 6px -1px rgb(0 0 0 / 10%), 0 2px 4px -1px rgb(0 0 0 / 6%);
+
+  /* Typography Scale (1.25 ratio, rounded to 4px) */
+  --text-sm: 0.75rem;
+
+  /* 12px */
+  --text-base: 1rem;
+
+  /* 16px */
+  --text-md: 1.25rem;
+
+  /* 20px */
+  --text-lg: 1.5rem;
+
+  /* 24px */
+  --text-xl: 2rem;
+
+  /* 32px */
+  --text-2xl: 2.5rem;
+
+  /* 40px */
+  --text-3xl: 3rem;
+
+  /* 48px */
+  --text-4xl: 3.75rem;
+
+  /* 60px */
 }
 
 /* Reset & Base */
@@ -171,7 +197,7 @@ header {
 .company-name {
   font-family: var(--font-heading);
   font-weight: 700;
-  font-size: 1.25rem;
+  font-size: var(--text-md);
 
   /* Smaller for mobile */
   line-height: 1.1;
@@ -180,7 +206,7 @@ header {
 
 .tagline {
   font-family: var(--font-body);
-  font-size: 0.8rem;
+  font-size: var(--text-sm);
   font-weight: 400;
   color: rgb(255 255 255 / 80%);
   margin: 0;
@@ -240,7 +266,7 @@ header {
   }
 
   .company-name {
-    font-size: 1.5rem;
+    font-size: var(--text-lg);
   }
 }
 
@@ -294,7 +320,7 @@ header {
 }
 
 .hero h1 {
-  font-size: 2.25rem;
+  font-size: var(--text-2xl);
 
   /* Smaller for mobile */
   margin-bottom: var(--spacing-md);
@@ -302,7 +328,7 @@ header {
 }
 
 .hero p {
-  font-size: 1.1rem;
+  font-size: var(--text-md);
   margin-bottom: var(--spacing-lg);
   opacity: 0.9;
 }
@@ -312,7 +338,7 @@ header {
   border-left: 4px solid var(--color-white);
   padding-left: var(--spacing-md);
   margin-bottom: var(--spacing-lg);
-  font-size: 1rem;
+  font-size: var(--text-base);
 }
 
 .hero-actions {
@@ -329,15 +355,15 @@ header {
   }
 
   .hero h1 {
-    font-size: 3.5rem;
+    font-size: var(--text-4xl);
   }
 
   .hero p {
-    font-size: 1.25rem;
+    font-size: var(--text-md);
   }
 
   .hero-quote {
-    font-size: 1.1rem;
+    font-size: var(--text-md);
   }
 
   .hero-actions {
@@ -510,7 +536,7 @@ footer {
   border-top: 1px solid rgb(255 255 255 / 10%);
   padding-top: 1.5rem;
   text-align: center;
-  font-size: 0.85rem;
+  font-size: var(--text-sm);
   opacity: 0.8;
   line-height: 1.6;
 }
@@ -629,13 +655,13 @@ footer {
 }
 
 .service-card-icon {
-  font-size: 2rem;
+  font-size: var(--text-xl);
   color: var(--color-primary);
 }
 
 .service-card-title {
   font-family: var(--font-heading);
-  font-size: 1.25rem;
+  font-size: var(--text-md);
   font-weight: 700;
   color: var(--color-primary);
   margin: 0;
@@ -645,7 +671,7 @@ footer {
   font-family: Inter, sans-serif;
   font-style: italic;
   color: #666;
-  font-size: 0.95rem;
+  font-size: var(--text-base);
   margin-top: 0;
   margin-bottom: 0;
 }
