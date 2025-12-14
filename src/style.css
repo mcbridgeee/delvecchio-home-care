@@ -227,6 +227,16 @@ header {
   color: var(--color-white);
   font-weight: 500;
   font-size: 0.95rem;
+  opacity: 1;
+  transition: opacity 0.2s;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+.nav-links a:not(.nav-phone):hover {
+  opacity: 1;
+  text-decoration: underline;
+  text-underline-offset: 4px;
 }
 
 .nav-phone {
@@ -267,6 +277,12 @@ header {
 
   .company-name {
     font-size: var(--text-lg);
+  }
+
+  .nav-links a:not(.nav-phone) {
+    text-decoration: none;
+    font-weight: 500;
+    opacity: 0.9;
   }
 }
 
@@ -812,5 +828,94 @@ footer {
 @media (width >=768px) {
   .testimonials-grid {
     grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* Free Quote Section */
+.quote-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--spacing-lg);
+  margin-top: var(--spacing-lg);
+}
+
+.contact-info-card {
+  background-color: var(--color-primary);
+  color: var(--color-white);
+  padding: 2.5rem;
+  border-radius: var(--radius);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  height: 100%;
+}
+
+.contact-item {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.contact-icon {
+  font-size: 1.5rem;
+  color: var(--color-white);
+  opacity: 0.9;
+}
+
+.emergency-note {
+  font-style: italic;
+  font-size: 0.9rem;
+  opacity: 0.8;
+  margin-top: auto;
+  border-top: 1px solid rgb(255 255 255 / 20%);
+  padding-top: 1.5rem;
+  line-height: 1.5;
+}
+
+.quote-form {
+  display: flex;
+  flex-direction: column;
+  order: -1;
+
+  /* Show form first on mobile */
+}
+
+.quote-form label {
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+  color: var(--color-text-light);
+  font-size: 0.95rem;
+}
+
+.quote-form input,
+.quote-form textarea {
+  padding: 0.75rem 1rem;
+  border: 1px solid #ccc;
+  border-radius: var(--radius);
+  margin-bottom: 1rem;
+  font-family: var(--font-body);
+  font-size: 1rem;
+  transition: border-color 0.2s;
+  width: 100%;
+}
+
+.quote-form input:focus,
+.quote-form textarea:focus {
+  outline: none;
+  border-color: var(--color-primary);
+  box-shadow: 0 0 0 3px rgb(44 82 52 / 10%);
+}
+
+@media (width >=768px) {
+  .quote-grid {
+    grid-template-columns: 1fr 1.5fr;
+    gap: 3rem;
+  }
+
+  .quote-form {
+    order: unset;
+
+    /* Restore DOM order (Contact first) on desktop */
   }
 }
