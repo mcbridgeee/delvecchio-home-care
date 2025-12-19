@@ -11,23 +11,31 @@ title: See Our Work | Del Vecchio Home Care
       our recent projects.
     </p>
 
-    <div
-      style="
-        padding: 4rem;
-        background-color: var(--color-secondary);
-        border-radius: var(--radius);
-      "
-    >
-      <span
-        class="material-symbols-outlined"
-        style="
-          font-size: var(--text-4xl);
-          color: var(--color-primary);
-          opacity: 0.5;
-        "
-        >imagesmode</span
-      >
-      <p>Project Gallery Coming Soon</p>
+    <div class="gallery-grid">
+      <!-- Project 1: Basement -->
+      <div class="project-comparison">
+        <h3 class="project-title">Basement Renovation</h3>
+        <div class="comparison-images">
+          <div class="image-wrapper">
+            <span class="image-label before">Before</span>
+            <img
+              src="{{ '/images/basement-before.png' | url }}"
+              alt="Basement before renovation"
+            />
+          </div>
+          <div class="image-wrapper">
+            <span class="image-label after">After</span>
+            <img
+              src="{{ '/images/basement-after.png' | url }}"
+              alt="Basement after renovation"
+            />
+          </div>
+        </div>
+        <p class="project-description">
+          Complete basement transformation including new flooring, drywall, and
+          lighting installation.
+        </p>
+      </div>
     </div>
   </div>
 </section>
