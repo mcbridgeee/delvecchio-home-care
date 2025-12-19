@@ -292,7 +292,8 @@ header {
 /* Hero - Mobile First */
 .hero {
   background-color: var(--color-primary);
-  background-image: url('images/hero-bg.jpg');
+
+  /* background-image set inline in index.njk for optimization */
   background-size: cover;
   background-position: center;
   color: var(--color-white);

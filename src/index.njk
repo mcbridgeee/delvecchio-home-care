@@ -3,7 +3,10 @@ layout: base.njk
 title: Del Vecchio Home Care
 ---
 
-<section class="hero">
+<section
+  class="hero"
+  style="background-image: url('{% imageUrl '/images/hero-bg.jpg' %}')"
+>
   <div class="container">
     <h1>
       Need a Hand?<br />From Emergency<br />Repairs to Full<br />Renovations.
@@ -321,11 +324,8 @@ title: Del Vecchio Home Care
             Custom shelving, trim, and repairs
           </p>
         </div>
-        <img
-          src="{{ '/images/carpentry.png' | url }}"
-          alt="Hands sanding wood"
-          class="service-card-image"
-        />
+        {% image "/images/carpentry.png", "Hands sanding wood", "(min-width:
+        768px) 400px, 100vw", "service-card-image" %}
       </div>
 
       <!-- Card 2: Plumbing -->
@@ -341,11 +341,8 @@ title: Del Vecchio Home Care
             Emergency repairs to installations
           </p>
         </div>
-        <img
-          src="{{ '/images/plumbing.png' | url }}"
-          alt="Modern bathroom faucet"
-          class="service-card-image"
-        />
+        {% image "/images/plumbing.png", "Modern bathroom faucet", "(min-width:
+        768px) 400px, 100vw", "service-card-image" %}
       </div>
 
       <!-- Card 3: Renovations -->
@@ -359,11 +356,8 @@ title: Del Vecchio Home Care
           </div>
           <p class="service-card-subtitle">Kitchen, bath, basement & more</p>
         </div>
-        <img
-          src="{{ '/images/renovation.png' | url }}"
-          alt="Home renovation interior"
-          class="service-card-image"
-        />
+        {% image "/images/renovation.png", "Home renovation interior",
+        "(min-width: 768px) 400px, 100vw", "service-card-image" %}
       </div>
     </div>
   </div>

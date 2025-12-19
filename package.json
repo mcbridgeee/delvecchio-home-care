@@ -29,6 +29,7 @@
     "stylelint-config-standard": "^39.0.1"
   },
   "dependencies": {
+    "@11ty/eleventy-img": "^6.0.4",
     "luxon": "^3.7.2"
   }
 }
