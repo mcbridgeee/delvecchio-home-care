@@ -153,6 +153,9 @@ header {
   background-color: var(--color-primary);
   color: var(--color-white);
   padding: 1rem 0;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
 }
 
 .nav-container {
@@ -978,11 +981,15 @@ footer {
 }
 
 .image-label.before {
-  border-left: 3px solid #e74c3c; /* Red accent for before */
+  border-left: 3px solid #e74c3c;
+
+  /* Red accent for before */
 }
 
 .image-label.after {
-  border-left: 3px solid var(--color-primary); /* Green accent for after */
+  border-left: 3px solid var(--color-primary);
+
+  /* Green accent for after */
 }
 
 .project-description {
@@ -993,7 +1000,7 @@ footer {
   line-height: 1.6;
 }
 
-@media (width >= 768px) {
+@media (width >=768px) {
   .comparison-images {
     grid-template-columns: 1fr 1fr;
     gap: var(--spacing-lg);
